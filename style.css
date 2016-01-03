@@ -35,6 +35,14 @@
         font-size: 1.5em;
       }
 
+      .d3-tip {
+        line-height: 1;
+        font-weight: bold;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 2px;
+      }
       
       .YlOrRd .q0-9{fill:rgb(255,255,204)} 
       .YlOrRd .q1-9{fill:rgb(255,237,160)} 
