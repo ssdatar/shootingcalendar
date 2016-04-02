@@ -35,12 +35,16 @@ function getText(d) {
       
       else 
         { 
-          var count = {'A': 0, 'B': 0, 'H': 0, 'N': 0, 'O': 0, 'W': 0};
+          var count = {'A': 0, 'B': 0, 'H': 0, 'N': 0, 'O': 0, 'W': 0, 'U':0};
           d.values.forEach(function (el) {
-            count[el.race] += 1;
+            if (el.race == '') {
+              count['U'] += 1;
+            } else {
+              count[el.race] += 1;
+            }
           }); 
 
-          var text = 'Whites killed: '+ count['W'] + '<br><br>' + 'Blacks killed: ' + count['B'] + '<br>';
+          var text = 'White: '+ count['W'] + '<br><br>' + 'Black: ' + count['B'] + '<br><br>' + 'Hispanic: ' + count['H'] + '<br><br>' + 'Asian: ' + count['A'] + '<br><br>' + 'Native American: ' + count['N'] + '<br><br>' + 'Other: ' + count['O'] + '<br><br>' + 'Unknown: ' + count['U'];
           return text;
           }
        }
