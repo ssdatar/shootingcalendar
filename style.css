@@ -1,55 +1,103 @@
-      #chart{
-        width: 100%;
-        margin: 0 auto;
-        z-index: 1;
-      } 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
-      .background {
-        fill: #545454;
-      }
+body {
+  margin: 0 3em 1em 3em auto;
+  font-family: 'Lato', helvetica, sans-serif;
+  background: #f6f6f6;
+}
 
-      line {
-        stroke: #fff;
-      }
+p {
+  font-size: 1.3em;
+}
 
-      text.active {
-        fill: red;
-      }
+.article {
+  padding: 3em;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-      .day {
-        fill: #fff;
-        stroke: #ccc;
-      }
+#chart{
+  width: 100%;
+  margin: 0 auto;
+} 
 
-      .rect:hover {
-        fill: #fff;
-        cursor: pointer;
-      }
+.background {
+  fill: #545454;
+}
 
-      .month {
-        fill: none;
-        stroke: #fff;
-        stroke-width: 4px;
-      }
-      .year-title {
-        font-size: 1.5em;
-      }
+line {
+  stroke: #fff;
+}
 
-      .d3-tip {
-        line-height: 1;
-        font-weight: bold;
-        padding: 12px;
-        background: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        border-radius: 2px;
-      }
-      
-      .YlOrRd .q0-9{fill:rgb(255,255,204)} 
-      .YlOrRd .q1-9{fill:rgb(255,237,160)} 
-      .YlOrRd .q2-9{fill:rgb(254,217,118)} 
-      .YlOrRd .q3-9{fill:rgb(254,178,76)} 
-      .YlOrRd .q4-9{fill:rgb(253,141,60)} 
-      .YlOrRd .q5-9{fill:rgb(252,78,42)} 
-      .YlOrRd .q6-9{fill:rgb(227,26,28)} 
-      .YlOrRd .q7-9{fill:rgb(189,0,38)} 
-      .YlOrRd .q8-9{fill:rgb(128,0,38)}
+text {
+  font-family: 'Lato', helvetica, sans-serif;
+}
+
+text.active {
+  fill: red;
+}
+
+.day {
+  fill: #fff;
+  stroke: #ccc;
+}
+
+.day:hover {
+  fill: #fff;
+  cursor: pointer;
+}
+
+.month {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4px;
+}
+.year-title {
+  font-size: 1.5em;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: white;
+  color: #696969;
+  border-radius: 2px;
+  border: 1px solid #545454;
+  opacity: 0.8;
+  box-shadow: 2px 2px 2px #ccc;
+}
+
+.YlOrRd .q0-9{fill:rgb(255,255,204)} 
+.YlOrRd .q1-9{fill:rgb(255,237,160)} 
+.YlOrRd .q2-9{fill:rgb(254,217,118)} 
+.YlOrRd .q3-9{fill:rgb(254,178,76)} 
+.YlOrRd .q4-9{fill:rgb(253,141,60)} 
+.YlOrRd .q5-9{fill:rgb(252,78,42)} 
+.YlOrRd .q6-9{fill:rgb(227,26,28)} 
+.YlOrRd .q7-9{fill:rgb(189,0,38)} 
+.YlOrRd .q8-9{fill:rgb(128,0,38)}
+
+span {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 36px;
+  }
+
+  h4 {
+    font-size: 14;
+  }
+
+  p {
+
+  }
+}
