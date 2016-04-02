@@ -14,6 +14,10 @@ p {
   font-size: 1.3em;
 }
 
+h1#headline {
+  margin-bottom: 1.5em;
+}
+
 .article {
   padding: 3em;
   max-width: 900px;
