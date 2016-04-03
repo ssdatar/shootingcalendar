@@ -12,6 +12,7 @@ body {
 
 p {
   font-size: 1.3em;
+  text-align: justify;
 }
 
 h1#headline {
@@ -86,22 +87,25 @@ text.active {
 .YlOrRd .q7-9{fill:rgb(189,0,38)} 
 .YlOrRd .q8-9{fill:rgb(128,0,38)}
 
-/*span {
-  background-color: black;
-  color: white;
-}
-*/
 .line {
     display: inline;
   }
 
-@media (max-width: 768px) {
+  /* Media queries */
+
+@media screen and (max-width: 995px) {
+
+  .line {
+    display: block;
+  }
+
+@media screen and (max-width: 768px) {
   .line {
     display: block;
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
 
   h4 {
@@ -109,13 +113,25 @@ text.active {
   }
 
   p {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 }
 
-
-@media (max-width: 995px) {
-
+@media screen and (max-width: 480px) {
   .line {
     display: block;
   }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+}
+
