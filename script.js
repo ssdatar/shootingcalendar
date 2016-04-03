@@ -1,10 +1,10 @@
 (function() {
 var width = 960,
-    height = 750,
+    height = 800,
     cellSize = 25; // cell size
 
 var no_months_in_a_row = Math.floor(width / (cellSize * 7 + 50));
-var shift_up = cellSize * 3;
+var shift_up = cellSize * 1.5;
 
 var day = d3.time.format("%w"), // day of the week
     day_of_month = d3.time.format("%e") // day of the month
@@ -16,8 +16,8 @@ var day = d3.time.format("%w"), // day of the week
     format = d3.time.format("%Y-%m-%d");
 
 var color = d3.scale.quantize()
-    .domain([1, 10])
-    .range(d3.range(9).map(function(d) { return "q" + d + "-9"; })); //coloring bucket
+    .domain([1, 9])
+    .range(d3.range(8).map(function(d) { return "q" + d + "-9"; })); //coloring bucket
 
 var tooltip = d3.tip()
     .attr('class', 'd3-tip')
@@ -109,7 +109,7 @@ d3.csv("data.csv", function(error, csv) {
     .key(function(d) { return d.date; }) //extract it by data
     .entries(csv);
 
-    console.log(data);
+    //console.log(data);
 
   var datesArray = [];
 
@@ -130,6 +130,46 @@ d3.csv("data.csv", function(error, csv) {
   rect.on('mouseout', tooltip.hide);
 
 });
+
+// Legend
+var legend = svg.selectAll('.legend')
+             .data(d3.range(1,9));
+
+//console.log(legend);
+
+legend.enter().append('g')
+.attr('class', 'legend')
+
+// Legend rectangles
+legend.append('rect')
+.attr('x', function (d, i) { return i * 82; })
+.attr('y', 35)
+.attr('width', 80)
+.attr('height', 30)
+.attr('class', function (d) { return color(d); })
+
+legend.exit().remove();
+
+// Legend title
+legend.append('text')
+.attr('class', 'legend-title')
+.text('Killed per day')
+.attr('x', 5)
+.attr('y', 25)
+
+// Legend labels
+legend.append('text')
+.attr('class', 'label')
+.text('1 person')
+.attr('x', 5)
+.attr('y', 85)
+
+legend.append('text')
+.attr('class', 'label')
+.text('8 persons')
+.attr('x', 600)
+.attr('y', 85)
+
 
 function monthTitle (t0) {
   return t0.toLocaleString("en-us", { month: "long" });
