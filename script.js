@@ -182,7 +182,7 @@
 
   legend.append('text')
   .attr('class', 'label')
-  .text('6 or more killed')
+  .text('More than 6 killed')
   .attr('x', 170)
   .attr('y', 85);
 
@@ -395,7 +395,7 @@
 
     legend.append('text')
     .attr('class', 'label')
-    .text('6 or more killed')
+    .text('More than 6 killed')
     .attr('x', 170)
     .attr('y', 85);
 
