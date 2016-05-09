@@ -4,6 +4,21 @@
           box-sizing: border-box;
 }
 
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
 body {
   margin: 0 3em 1em 3em auto;
   font-family: 'Lato', helvetica, sans-serif;
@@ -48,6 +63,7 @@ text.active {
 
 text.label {
   font-size: 14px;
+  fill: #545454;
 }
 
 text.month-title {
@@ -85,17 +101,16 @@ text.month-title {
   box-shadow: 2px 2px 2px #ccc;
 }
 
-.YlOrRd .q0-9{fill:rgb(255,255,204)} 
-.YlOrRd .q1-9{fill:rgb(255,237,160)} 
-.YlOrRd .q2-9{fill:rgb(254,217,118)} 
-.YlOrRd .q3-9{fill:rgb(254,178,76)} 
-.YlOrRd .q4-9{fill:rgb(253,141,60)} 
-.YlOrRd .q5-9{fill:rgb(252,78,42)} 
-.YlOrRd .q6-9{fill:rgb(227,26,28)} 
-.YlOrRd .q7-9{fill:rgb(189,0,38)} 
-.YlOrRd .q8-9{fill:rgb(128,0,38)}
+.YlOrRd .q1-3{fill:rgb(255,237,160)} 
+.YlOrRd .q2-2{fill:rgb(254,178,76)} 
+.YlOrRd .q3-3{fill:rgb(240,59,32)}
 
-rect.q0-9{fill:rgb(255,255,204)} 
+
+rect.q1-3{fill:rgb(255,237,160)} 
+rect.q2-3{fill:rgb(254,178,76)} 
+rect.q3-3{fill:rgb(240,59,32)}
+
+/*rect.q0-9{fill:rgb(255,255,204)} 
 rect.q1-9{fill:rgb(255,237,160)} 
 rect.q2-9{fill:rgb(254,217,118)} 
 rect.q3-9{fill:rgb(254,178,76)} 
@@ -104,7 +119,7 @@ rect.q5-9{fill:rgb(252,78,42)}
 rect.q6-9{fill:rgb(227,26,28)} 
 rect.q7-9{fill:rgb(189,0,38)} 
 rect.q8-9{fill:rgb(128,0,38)}
-
+*/
 .line {
     display: inline;
   }
